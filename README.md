@@ -1,6 +1,6 @@
 # Kinetic Flow // Cyberpunk Portfolio Theme
 
-Benvenuto nel repository di **Kinetic Flow**, il tema WordPress personalizzato in stile **Cyberpunk** per il portfolio professionale di **Manuela Musmeci** (Consulente Tecnica B2B e Laureanda in Ingegneria Informatica).
+Benvenut* nel repository di **Kinetic Flow**, il tema WordPress personalizzato in stile **Cyberpunk** per il portfolio professionale di **Manuela Musmeci** (Consulente Tecnica B2B e Laureanda in Ingegneria Informatica).
 
 Questo repository è strutturato in modo da tracciare esclusivamente il codice del tema custom e le configurazioni di sviluppo locale, escludendo i file core di WordPress per mantenere la codebase pulita e leggera.
 
