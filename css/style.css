@@ -8,7 +8,7 @@ Version: 1.0
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&family=Share+Tech+Mono&display=swap');
 
 html {
-    font-size: 17px; /* Aumentata la dimensione base (default 16px) per rendere tutti i font leggermente più grandi */
+    font-size: 17px; /* Base size */
 }
 
 :root {
@@ -29,7 +29,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Griglia Cyberpunk di sfondo */
+/* Cyberpunk Grid Background */
 .cyber-grid {
     position: fixed;
     top: 0;
@@ -44,7 +44,7 @@ body {
     pointer-events: none;
 }
 
-/* Header & Navigazione */
+/* Header & Navigation */
 .header {
     display: flex;
     justify-content: space-between;
@@ -76,14 +76,14 @@ body {
     color: var(--neon-magenta);
 }
 
-/* Contenitore Principale */
+/* Main Container */
 .container {
     padding: 120px 50px 50px 50px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Sezioni */
+/* Sections */
 .page-section {
     display: none;
     animation: fadeIn 0.5s ease forwards;
@@ -98,7 +98,7 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Tipografia */
+/* Typography */
 h1.glitch-text {
     font-size: 4rem;
     font-weight: 700;
@@ -115,7 +115,7 @@ h1.glitch-text {
     margin-bottom: 40px;
 }
 
-/* Griglia Progetti ed Esperienze */
+/* Project and Experience Grid */
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -181,7 +181,7 @@ h1.glitch-text {
     border-radius: 3px;
 }
 
-/* Bottoni Contatto */
+/* Contact Buttons */
 .contact-channels {
     display: flex;
     gap: 20px;
@@ -207,7 +207,7 @@ h1.glitch-text {
     box-shadow: 0 0 15px rgba(0, 243, 255, 0.4);
 }
 
-/* Cursore Custom Cyberpunk */
+/* Custom Cyberpunk Cursor */
 .custom-cursor {
     position: fixed;
     width: 8px;
@@ -278,7 +278,7 @@ h1.glitch-text {
     margin-left: 5px;
 }
 
-/* Stili per Esperienze e Formazione in Home */
+/* Professional Experience */
 .experience-list {
     display: flex;
     flex-direction: column;

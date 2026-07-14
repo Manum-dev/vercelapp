@@ -1,37 +1,4 @@
-# ==========================================
-# WordPress Gitignore - Clean Developer Setup
-# ==========================================
-
-# 1. Ignore everything in the root folder by default
-/*
-
-# 2. Whitelist specific configuration and custom files in the root
-!.gitignore
-!.htaccess
-!docker-compose.yml
-!wp-config-docker.php
-!README.md
-!index.html
-
-# 3. Whitelist wp-content/ but ignore its contents by default
-!wp-content/
-wp-content/*
-
-# 4. Whitelist themes but ignore default themes (only keep kinetic-flow)
-!wp-content/themes/
-wp-content/themes/*
-!wp-content/themes/kinetic-flow/
-
-# 5. Whitelist plugins but ignore default plugins by default
-!wp-content/plugins/
-wp-content/plugins/*
-
-# 6. Databases & SQL Dumps
-*.sql
-*.sql.gz
-*.sqlite
-
-# 7. OS & System Files
+# OS files
 .DS_Store
 .DS_Store?
 ._*
@@ -40,7 +7,7 @@ wp-content/plugins/*
 ehthumbs.db
 Thumbs.db
 
-# 8. IDEs and Editors
+# IDEs and Editors
 .idea/
 .vscode/
 *.sublime-project
@@ -48,9 +15,20 @@ Thumbs.db
 .project
 .settings/
 
-# 9. Package Managers & Build Artifacts
+# Vercel & Node
+.vercel
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# PDF local log
+report_errori_wordpress_wsl.pdf

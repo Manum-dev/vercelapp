@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // 1. ANIMAZIONE NAVIGAZIONE TRA LE PAGINE
+    // 1. PAGE NAVIGATION ANIMATION
     const links = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('.page-section');
 
@@ -10,12 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
             
             const targetPage = link.getAttribute('data-page');
 
-            // Rimuovi classe attiva da tutti i link
+            // Remove active class from all links
             links.forEach(l => l.classList.remove('active'));
-            // Aggiungi al link cliccato
+            // Add to clicked link
             link.classList.add('active');
 
-            // Cambia sezione con dissolvenza hardware
+            // Change section with hardware fade animation
             sections.forEach(section => {
                 if (section.getAttribute('id') === targetPage) {
                     section.classList.add('active');
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 2. CURSORE CUSTOM CHE SEGUE IL MOUSE
+    // 2. CUSTOM CURSOR FOLLOWING MOUSE
     const cursor = document.querySelector('.custom-cursor');
     
     document.addEventListener('mousemove', (e) => {
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cursor.style.top = e.clientY + 'px';
     });
 
-    // Effetto ingrandimento sui link
+    // Hover enlarge effect on interactive elements
     const interactiveElements = document.querySelectorAll('.nav-link, .project-card, .cyber-button');
     interactiveElements.forEach(el => {
         el.addEventListener('mouseenter', () => {
