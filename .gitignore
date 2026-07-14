@@ -65,7 +65,7 @@ Thumbs.db
 .settings/
 
 # ==========================================
-# Package Managers & Build Artifacts
+# Package Managers & Build Artifacts2
 # ==========================================
 node_modules/
 npm-debug.log*
