@@ -1,0 +1,74 @@
+# ==========================================
+# WordPress Core & Config
+# ==========================================
+# Exclude the main config file as it contains database credentials and secret keys
+wp-config.php
+
+# Exclude any local backup configuration files
+wp-config-local.php
+
+# ==========================================
+# WordPress Content Directory
+# ==========================================
+# Exclude user uploads (images, PDFs, documents)
+wp-content/uploads/
+
+# Exclude WordPress upgrade files
+wp-content/upgrade/
+
+# Exclude database backups
+wp-content/backup-db/
+wp-content/backups/
+
+# Exclude cache directories
+wp-content/cache/
+wp-content/wphb-cache/
+wp-content/minify/
+
+# Exclude blogs directory (multisite)
+wp-content/blogs.dir/
+
+# ==========================================
+# Log & Debug Files
+# ==========================================
+# Exclude PHP error logs and WordPress debug logs
+*.log
+wp-content/debug.log
+
+# ==========================================
+# Databases & SQL Dumps
+# ==========================================
+# Exclude direct SQL dumps or SQLite databases in the repo
+*.sql
+*.sql.gz
+*.sqlite
+
+# ==========================================
+# OS & System Files
+# ==========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ==========================================
+# IDEs and Editors
+# ==========================================
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.project
+.settings/
+
+# ==========================================
+# Package Managers & Build Artifacts
+# ==========================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
