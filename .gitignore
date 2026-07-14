@@ -1,51 +1,35 @@
 # ==========================================
-# WordPress Core & Config
+# WordPress Gitignore - Clean Developer Setup
 # ==========================================
-# Exclude the main config file as it contains database credentials and secret keys
-wp-config.php
 
-# Exclude any local backup configuration files
-wp-config-local.php
+# 1. Ignore everything in the root folder by default
+/*
 
-# ==========================================
-# WordPress Content Directory
-# ==========================================
-# Exclude user uploads (images, PDFs, documents)
-wp-content/uploads/
+# 2. Whitelist specific configuration and custom files in the root
+!.gitignore
+!.htaccess
+!docker-compose.yml
+!wp-config-docker.php
 
-# Exclude WordPress upgrade files
-wp-content/upgrade/
+# 3. Whitelist wp-content/ but ignore its contents by default
+!wp-content/
+wp-content/*
 
-# Exclude database backups
-wp-content/backup-db/
-wp-content/backups/
+# 4. Whitelist themes but ignore default themes (only keep kinetic-flow)
+!wp-content/themes/
+wp-content/themes/*
+!wp-content/themes/kinetic-flow/
 
-# Exclude cache directories
-wp-content/cache/
-wp-content/wphb-cache/
-wp-content/minify/
+# 5. Whitelist plugins but ignore default plugins by default
+!wp-content/plugins/
+wp-content/plugins/*
 
-# Exclude blogs directory (multisite)
-wp-content/blogs.dir/
-
-# ==========================================
-# Log & Debug Files
-# ==========================================
-# Exclude PHP error logs and WordPress debug logs
-*.log
-wp-content/debug.log
-
-# ==========================================
-# Databases & SQL Dumps
-# ==========================================
-# Exclude direct SQL dumps or SQLite databases in the repo
+# 6. Databases & SQL Dumps
 *.sql
 *.sql.gz
 *.sqlite
 
-# ==========================================
-# OS & System Files
-# ==========================================
+# 7. OS & System Files
 .DS_Store
 .DS_Store?
 ._*
@@ -54,9 +38,7 @@ wp-content/debug.log
 ehthumbs.db
 Thumbs.db
 
-# ==========================================
-# IDEs and Editors
-# ==========================================
+# 8. IDEs and Editors
 .idea/
 .vscode/
 *.sublime-project
@@ -64,9 +46,7 @@ Thumbs.db
 .project
 .settings/
 
-# ==========================================
-# Package Managers & Build Artifacts2
-# ==========================================
+# 9. Package Managers & Build Artifacts
 node_modules/
 npm-debug.log*
 yarn-debug.log*
