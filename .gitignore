@@ -10,6 +10,7 @@
 !.htaccess
 !docker-compose.yml
 !wp-config-docker.php
+!README.md
 
 # 3. Whitelist wp-content/ but ignore its contents by default
 !wp-content/
