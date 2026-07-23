@@ -358,12 +358,19 @@ h1.glitch-text {
     background: rgba(0, 243, 255, 0.01);
     box-shadow: 0 0 15px rgba(0, 243, 255, 0.05);
 }
-
 /* Hide default cursor on desktop when custom cursor is active */
-@media (min-width: 1025px) and (hover: hover) {
-    html, body, a, button, input, select, textarea, [role="button"], .nav-link, .project-card, .cyber-button {
-        cursor: none !important;
-    }
+.custom-cursor-active,
+.custom-cursor-active body,
+.custom-cursor-active a,
+.custom-cursor-active button,
+.custom-cursor-active input,
+.custom-cursor-active select,
+.custom-cursor-active textarea,
+.custom-cursor-active [role="button"],
+.custom-cursor-active .nav-link,
+.custom-cursor-active .project-card,
+.custom-cursor-active .cyber-button {
+    cursor: none !important;
 }
 
 /* ==========================================================================

@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const enableCursor = cursor && !window.matchMedia('(hover: none)').matches && window.innerWidth > 1024;
     
     if (enableCursor) {
+        document.documentElement.classList.add('custom-cursor-active');
         document.addEventListener('mousemove', (e) => {
             cursor.style.left = e.clientX + 'px';
             cursor.style.top = e.clientY + 'px';
