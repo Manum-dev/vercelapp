@@ -32,3 +32,14 @@ pnpm-debug.log*
 
 # PDF local log
 report_errori_wordpress_wsl.pdf
+
+# WordPress
+wp-admin/
+wp-content/
+wp-includes/
+wp-*.php
+index.php
+xmlrpc.php
+license.txt
+readme.html
+.htaccess

@@ -63,6 +63,10 @@ body {
     text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
 }
 
+.menu-toggle {
+    display: none;
+}
+
 .nav a {
     color: var(--text-muted);
     text-decoration: none;
@@ -210,6 +214,8 @@ h1.glitch-text {
 /* Custom Cyberpunk Cursor */
 .custom-cursor {
     position: fixed;
+    top: -100px;
+    left: -100px;
     width: 8px;
     height: 8px;
     background-color: var(--neon-cyan);
@@ -318,11 +324,18 @@ h1.glitch-text {
 
 .experience-bullets li {
     margin-bottom: 8px;
-    list-style-type: square;
+    list-style-type: none;
+    position: relative;
+    padding-left: 18px;
 }
 
-.experience-bullets li::marker {
+.experience-bullets li::before {
+    content: ">";
+    position: absolute;
+    left: 0;
     color: var(--neon-cyan);
+    font-family: 'Share Tech Mono', monospace;
+    font-weight: bold;
 }
 
 .education-grid {
@@ -344,6 +357,13 @@ h1.glitch-text {
     border-color: var(--neon-cyan);
     background: rgba(0, 243, 255, 0.01);
     box-shadow: 0 0 15px rgba(0, 243, 255, 0.05);
+}
+
+/* Hide default cursor on desktop when custom cursor is active */
+@media (min-width: 1025px) and (hover: hover) {
+    html, body, a, button, input, select, textarea, [role="button"], .nav-link, .project-card, .cyber-button {
+        cursor: none !important;
+    }
 }
 
 /* ==========================================================================
@@ -398,7 +418,7 @@ h1.glitch-text {
     
     /* Hamburger Menu Toggle */
     .menu-toggle {
-        display: flex;
+        display: flex !important;
         flex-direction: column;
         justify-content: space-between;
         width: 26px;
