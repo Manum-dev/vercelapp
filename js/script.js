@@ -6,23 +6,34 @@ document.addEventListener('DOMContentLoaded', () => {
     
     if (enableCursor) {
         document.documentElement.classList.add('custom-cursor-active');
+        let mouseX = 0;
+        let mouseY = 0;
+        let isMoving = false;
+
         document.addEventListener('mousemove', (e) => {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            
+            if (!isMoving) {
+                isMoving = true;
+                requestAnimationFrame(() => {
+                    cursor.style.left = mouseX + 'px';
+                    cursor.style.top = mouseY + 'px';
+                    isMoving = false;
+                });
+            }
         });
 
         // Effetto ingrandimento sui link e pulsanti interattivi
         const interactiveElements = document.querySelectorAll('.nav-link, .project-card, .cyber-button');
         interactiveElements.forEach(el => {
             el.addEventListener('mouseenter', () => {
-                cursor.style.width = '24px';
-                cursor.style.height = '24px';
+                cursor.style.transform = 'translate(-50%, -50%) scale(3)';
                 cursor.style.background = 'transparent';
                 cursor.style.border = '2px solid var(--neon-magenta)';
             });
             el.addEventListener('mouseleave', () => {
-                cursor.style.width = '8px';
-                cursor.style.height = '8px';
+                cursor.style.transform = 'translate(-50%, -50%) scale(1)';
                 cursor.style.background = '#00f3ff';
                 cursor.style.border = 'none';
             });

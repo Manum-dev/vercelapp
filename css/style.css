@@ -211,7 +211,6 @@ h1.glitch-text {
     box-shadow: 0 0 15px rgba(0, 243, 255, 0.4);
 }
 
-/* Custom Cyberpunk Cursor */
 .custom-cursor {
     position: fixed;
     top: -100px;
@@ -221,9 +220,10 @@ h1.glitch-text {
     background-color: var(--neon-cyan);
     border-radius: 50%;
     pointer-events: none;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1);
+    transform-origin: center;
     z-index: 9999;
-    transition: width 0.2s, height 0.2s, background-color 0.2s, border 0.2s;
+    transition: transform 0.12s ease-out, background-color 0.12s ease-out, border 0.12s ease-out;
 }
 
 /* Bio Cyber Box - Terminal Design */
