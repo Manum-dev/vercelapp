@@ -358,6 +358,35 @@ h1.glitch-text {
     background: rgba(0, 243, 255, 0.01);
     box-shadow: 0 0 15px rgba(0, 243, 255, 0.05);
 }
+
+/* Badge layout for education cards */
+.education-card.has-badge {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.education-card .card-badge {
+    width: 70px;
+    height: 70px;
+    flex-shrink: 0;
+    filter: drop-shadow(0 0 10px rgba(0, 243, 255, 0.3));
+    transition: filter 0.3s;
+}
+
+.education-card:hover .card-badge {
+    filter: drop-shadow(0 0 15px var(--neon-cyan));
+}
+
+@media (max-width: 480px) {
+    .education-card.has-badge {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 15px;
+    }
+}
+
 /* Hide default cursor on desktop when custom cursor is active */
 .custom-cursor-active,
 .custom-cursor-active body,
