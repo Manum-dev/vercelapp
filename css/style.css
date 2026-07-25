@@ -617,3 +617,28 @@ h1.glitch-text {
         font-size: 0.9rem;
     }
 }
+
+/* Footer Styling */
+.footer {
+    text-align: center;
+    padding: 30px 20px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.85rem;
+    border-top: 1px solid rgba(0, 243, 255, 0.1);
+    margin-top: 60px;
+    color: var(--text-muted);
+}
+
+.footer a {
+    color: var(--neon-magenta);
+    text-decoration: none;
+    margin-left: 10px;
+    text-shadow: 0 0 5px rgba(255, 0, 234, 0.3);
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: var(--neon-cyan);
+    text-shadow: 0 0 5px rgba(0, 243, 255, 0.5);
+}
+
