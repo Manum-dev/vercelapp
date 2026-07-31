@@ -43,3 +43,4 @@ xmlrpc.php
 license.txt
 readme.html
 .htaccess
+.env*
